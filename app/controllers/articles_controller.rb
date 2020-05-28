@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    #raise prints params to page
      raise params.inspect
   end
 end
