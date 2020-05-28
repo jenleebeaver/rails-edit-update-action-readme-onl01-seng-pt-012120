@@ -27,6 +27,11 @@ class ArticlesController < ApplicationController
 
   def update
     #raise prints params to page
-     raise params.inspect
+     #raise params.inspect
+
+     #queries the db for article.id and stores in an instance variable 
+     @article = Article.find(params[:id])
+@article.update(title: params[:article][:title], description: params[:article][:description])
+redirect_to article_path(@article)
   end
 end
