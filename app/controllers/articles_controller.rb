@@ -31,8 +31,8 @@ class ArticlesController < ApplicationController
 
      #queries the db for article.id and stores in an instance variable
      @article = Article.find(params[:id])
-     #updates and saves params 
+     #updates and saves params
      @article.update(title: params[:article][:title], description: params[:article][:description])
-redirect_to article_path(@article)
+     redirect_to article_path(@article)
   end
 end
